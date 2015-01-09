@@ -1,0 +1,38 @@
+{
+  "name": "chrisbjr/smsblaster-sdk",
+  "description": "A PHP library for consuming the SMS Blaster API",
+  "keywords": [
+    "sms",
+    "sms blaster",
+    "philippines",
+    "globe",
+    "smart",
+    "sun"
+  ],
+  "type": "library",
+  "license": "Apache-2.0",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://composer.coreproc.ph"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "5.*",
+    "katzgrau/klogger": "1.0.*",
+    "coreproc/msisdn-ph": "0.1.*",
+    "nesbot/Carbon": "*"
+  },
+  "authors": [
+    {
+      "name": "Chris Bautista",
+      "email": "chrisbjr@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Chrisbjr\\SmsBlaster\\Sdk\\": "src"
+    }
+  },
+  "minimum-stability": "stable"
+}
