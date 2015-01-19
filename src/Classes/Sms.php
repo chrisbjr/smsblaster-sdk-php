@@ -59,7 +59,7 @@ class Sms
     {
         foreach ($smsResponse as $key => $value) {
             if ($key == 'created_at' || $key == 'updated_at') {
-                $this->$key = Carbon::parse($smsResponse->$key->date, $smsResponse->$key->timezone);
+                $this->$key = Carbon::parse($smsResponse[$key]['date'], $smsResponse[$key]['timezone']);
             } else if (property_exists($this, $key)) {
                 $this->$key = $value;
             }

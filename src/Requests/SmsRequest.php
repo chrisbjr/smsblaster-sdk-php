@@ -83,13 +83,13 @@ class SmsRequest
                     'origin'    => $this->origin,
                     'recipient' => $this->recipient,
                     'message'   => $this->message,
-                    'mock'      => $this->isMock
+                    'mock'      => $this->isMock()
                 ]
             ])->then(
                 function (ResponseInterface $response) {
                     // successful
                     $json = $response->json();
-                    $sms = new Sms($json->data);
+                    $sms = new Sms($json['data']);
                     $this->smsInterface->onSuccess($sms);
                 },
                 function (RequestException $error) {
@@ -189,7 +189,7 @@ class SmsRequest
     /**
      * @return boolean
      */
-    public function isIsMock()
+    public function isMock()
     {
         return $this->isMock;
     }
