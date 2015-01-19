@@ -33,6 +33,11 @@ class SmsRequest
     private $message;
 
     /**
+     * @var boolean
+     */
+    private $isMock = false;
+
+    /**
      * @var SmsInterface
      */
     private $smsInterface;
@@ -78,6 +83,7 @@ class SmsRequest
                     'origin'    => $this->origin,
                     'recipient' => $this->recipient,
                     'message'   => $this->message,
+                    'mock'      => $this->isMock
                 ]
             ])->then(
                 function (ResponseInterface $response) {
@@ -178,6 +184,22 @@ class SmsRequest
     public function setMessage($message)
     {
         $this->message = $message;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isIsMock()
+    {
+        return $this->isMock;
+    }
+
+    /**
+     * @param boolean $isMock
+     */
+    public function setIsMock($isMock)
+    {
+        $this->isMock = $isMock;
     }
 
 }
