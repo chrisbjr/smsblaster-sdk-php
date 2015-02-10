@@ -1,7 +1,7 @@
-Globe Labs API - PHP Library
+SMS Blaster SDK - PHP Library
 ========
 
-A PHP library for consuming Globe Labs API - brought to you by Coreproc.
+A PHP library for consuming the SMS Blaster API.
 
 ## Quick start
 
