@@ -21,7 +21,7 @@
     "guzzlehttp/guzzle": "5.*",
     "katzgrau/klogger": "1.0.*",
     "coreproc/msisdn-ph": "0.1.*",
-    "nesbot/Carbon": "*"
+    "nesbot/carbon": "*"
   },
   "authors": [
     {
